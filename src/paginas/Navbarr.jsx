@@ -18,7 +18,7 @@ function Navbarr() {
     <>
 <Navbar bg="light" variant="light">
         <Container>
-      <Navbar.Brand>MusicLine</Navbar.Brand>
+      <Navbar.Brand>Creaciones</Navbar.Brand>
    
       {isLoggedIn === true ? (
     <Nav className="me-auto">

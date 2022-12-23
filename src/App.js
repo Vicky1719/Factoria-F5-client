@@ -11,9 +11,6 @@ import Profile from "./paginas/Profile";
 import ProfileEdit from "./paginas/ProfileEdit";
 import CreationCreate from "./paginas/CreationCreate";
 import CreationList from "./paginas/CreationList";
-import CreationDetail from "./paginas/CreationDetail";
-import CreationEdit from "./paginas/CreationEdit";
-import IsPrivate from "./paginas/IsPrivate";
 import MyCreations from "./paginas/MyCreations";
 
 function App() {
@@ -28,7 +25,6 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/edit" element={<ProfileEdit />} />
         <Route path="/profile/new-creation" element={<CreationCreate />} />
-        <Route path="/creation/:creationId" element={<CreationDetail />} />
         <Route path="/creation" element={<CreationList />} />
         <Route/>
 
