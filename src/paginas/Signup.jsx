@@ -42,6 +42,7 @@ function Signup() {
         setErrorMessage(error.response.data.errorMessage)
       } else {
         navigate("/error")
+        console.log("hola", error)
       }
     }
   };

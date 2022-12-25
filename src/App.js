@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Navbarr from "./paginas/Navbarr";
 import { Routes, Route } from "react-router-dom";
