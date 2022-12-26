@@ -25,8 +25,6 @@ function App() {
         <Route path="/profile/edit" element={<ProfileEdit />} />
         <Route path="/profile/new-creation" element={<CreationCreate />} />
         <Route path="/creation" element={<CreationList />} />
-        <Route/>
-
         <Route path="/profile/my-creation" element={<MyCreations />} />
 
         {/* errores */}

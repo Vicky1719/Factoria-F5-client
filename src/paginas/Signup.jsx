@@ -35,14 +35,14 @@ function Signup() {
 
     try {
       await signupService(newUser)
+      console.log("usuario agregado", newUser)
       navigate("/login")
 
     } catch (error) {
       if (error.response && error.response.status === 400) {
         setErrorMessage(error.response.data.errorMessage)
       } else {
-        navigate("/error")
-        console.log("hola", error)
+        navigate("/login")
       }
     }
   };
