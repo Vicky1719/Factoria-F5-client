@@ -52,22 +52,21 @@ function CreationDetail() {
       
       <h2>Detalles</h2>
       <p>Nombre: {creationDetail.name}</p>
-      <p>Imagen: {creationDetail.imagen}</p>
-      
-    
+      <p>Imagen:</p>
+      <br/>
+         {<img src={creationDetail.image} alt="photo-detail" width={200} />}      
       {user.user._id === creationDetail.user && (
         <Link to={`/creation/${creationId}/edit`}>
+<br/>
+
           <button>Editar</button></Link>
         )}
-
 {user.user._id === creationDetail.user && (
           <button onClick={handleDelete}>Borrar</button>
 
         )}
 
-      <Link to={`/creation/${creationId}/comment`}>
-        <button>Añadir comentario</button>
-      </Link>
+
     </div>
   );
 }

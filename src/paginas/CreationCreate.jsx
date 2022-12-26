@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { createCreationService } from "../services/creation.services";
+import { uploadImageService } from "../services/upload.services";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -11,23 +12,10 @@ function CreationCreate() {
   const navigate = useNavigate();
   const [nameInput, setNameInput] = useState("");
   const [imageInput, setImageInput] = useState("");
-
-  useEffect(() => {
-getData()
-  },[])
-
-
-  const getData = async() => {
-    try {
-const response = await createCreationService()
-console.log("lupa", response.data)
-    }catch(error) {
-      navigate("/error");
-    }
-  }
+  const [isUploadingImage, setIsUploadingImage] = useState(false);
 
   const handleNameChange = (event) => setNameInput(event.target.value);
-  const handleImageChange = (event) => setImageInput(event.target.value);
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -43,13 +31,30 @@ console.log("lupa", response.data)
     }
   };
 
+  const handleImageChange = async (event) => {
+    setIsUploadingImage(true)
+    console.log(event.target.files[0])
+
+    const sendForm = new FormData()
+    sendForm.append("image", event.target.files[0])
+
+    try {
+      const response = await uploadImageService(sendForm)
+      console.log(response.data.image)
+      setImageInput(response.data.image)
+      setIsUploadingImage(false)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div className="fondo" style={{ width: 700, padding: 30 }}>
       <h1>Crea tu nueva creación</h1>
       <Form className="form" onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label>Nombre:</Form.Label>
-          <Form.Control
+          <input
             type="text"
             name="name"
             value={nameInput}
@@ -64,7 +69,10 @@ console.log("lupa", response.data)
             onChange={handleImageChange}>
           </input>
         </Form.Group>
-
+        <br />
+        {isUploadingImage === true && <p>... loading content</p>}
+        {imageInput !== "" ? <img src={imageInput} alt="image" width={200} /> : <p> Choose image </p>}
+<br />
         <Button type="submit">Crear</Button>
       </Form>
     </div>

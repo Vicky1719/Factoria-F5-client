@@ -10,14 +10,12 @@ function Signup() {
   const navigate = useNavigate()
 
   const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
   const [username, setUsername] = useState ("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("")
 
   const handleFirstnameChange = (e) => setFirstname(e.target.value);
-  const handleLastnameChange = (e) => setLastname(e.target.value);
   const handleUsernameChange = (e) => setUsername(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
@@ -27,7 +25,6 @@ function Signup() {
 
     const newUser = {
       firstname: firstname,
-      lastname: lastname,
       username: username,
       email: email,
       password: password
@@ -63,14 +60,10 @@ padding: 30 }}>
 </Form.Group>
 
 <Form.Group>
-<Form.Label>Nombre:</Form.Label>
+<Form.Label>Nombre y Apellidos:</Form.Label>
 <Form.Control type="text" name="firstname" value={firstname} onChange={handleFirstnameChange} />
 </Form.Group>
 
-<Form.Group>
-<Form.Label>Apellidos:</Form.Label>
-<Form.Control type="text" name="lastname" value={lastname} onChange={handleLastnameChange} />
-</Form.Group>
 
 <Form.Group>
 <Form.Label>Email:</Form.Label>

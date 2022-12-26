@@ -19,7 +19,6 @@ const navigate = useNavigate()
 
   const [usernameInput, setUsernameInput] = useState("")
   const [firstnameInput, setFirstnameInput] = useState("")
-  const [lastnameInput, setLastnameInput] = useState("")
   const [emailInput, setEmailInput] = useState("")
 
 
@@ -33,7 +32,6 @@ const navigate = useNavigate()
       setDetails(response.data)
       setUsernameInput(response.data.username)
       setFirstnameInput(response.data.firstname)
-      setLastnameInput(response.data.lastname)
       setEmailInput(response.data.email)
     
       setIsFetching(false)
@@ -43,7 +41,6 @@ const navigate = useNavigate()
   }
   const handleUsernameChange = (event) => setUsernameInput(event.target.value)
   const handleFirstnameChange = (event) => setFirstnameInput(event.target.value)
-  const handleLastnameChange = (event) => setLastnameInput(event.target.value)
   const handleEmailChange = (event) => setEmailInput(event.target.value)
 
 
@@ -53,7 +50,6 @@ const navigate = useNavigate()
     const updatedProfile = {
         username: usernameInput,
       firstname: firstnameInput, 
-      lastname: lastnameInput,
       email: emailInput
     }
     
@@ -90,7 +86,7 @@ const navigate = useNavigate()
       <div className='fondo' style={{
 width: 700, 
 padding: 30 }}>
-<h4>Accede</h4>
+<h4>Mis datos</h4>
 <Form className="form" onSubmit={handleUpdate}>
 <Form.Group>
 <Form.Label>Usuario:</Form.Label>
@@ -98,14 +94,11 @@ padding: 30 }}>
 </Form.Group>
 
 <Form.Group>
-<Form.Label>Nombre:</Form.Label>
+<Form.Label>Nombre y Apellidos:</Form.Label>
 <Form.Control type="text" name="firstname" value={firstnameInput} onChange={handleFirstnameChange} />
 </Form.Group>
 
-<Form.Group>
-<Form.Label>Apellidos:</Form.Label>
-<Form.Control type="text" name="lastname" value={lastnameInput} onChange={handleLastnameChange} />
-</Form.Group>
+
 
 <Form.Group>
 <Form.Label>Email:</Form.Label>

@@ -37,7 +37,8 @@ function CreationList() {
         return  (
           <p key={eachCreation._id}>
             <Link to={`/creation/${eachCreation._id}`}>
-           < Card body style={{width: "250px", textDecoration: "none"}} >{eachCreation.name}{eachCreation.image}</Card>
+            < Card body style={{width: "250px", textDecoration: "none"}} >{eachCreation.name}</Card>
+           <img src={eachCreation.image} alt="photo-creation" width={150} />
             </Link>
           </p>
           

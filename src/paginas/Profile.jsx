@@ -42,8 +42,7 @@ function Profile() {
   return (
     <div className='fondo'>
       < Card body><h3>Hola! {details.username} </h3>
-      <p>Nombre: {details.firstname}</p>
-      <p>Apellidos: {details.lastname}</p></Card>
+      </Card>
      
 
       <Link to={"/profile/edit"}><Button>Editar</Button></Link>

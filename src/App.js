@@ -11,6 +11,7 @@ import ProfileEdit from "./paginas/ProfileEdit";
 import CreationCreate from "./paginas/CreationCreate";
 import CreationList from "./paginas/CreationList";
 import CreationDetail from "./paginas/CreationDetail";
+import CreationEdit from "./paginas/CreationEdit";
 import MyCreations from "./paginas/MyCreations";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/creation" element={<CreationList />} />
         <Route path="/profile/my-creation" element={<MyCreations />} />
         <Route path="/creation/:creationId" element={<CreationDetail />} />
+        <Route path="/creation/:creationId/edit" element={<CreationEdit />} />
 
         {/* errores */}
 
