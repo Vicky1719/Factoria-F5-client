@@ -10,26 +10,17 @@ import Form from "react-bootstrap/Form";
 function CreationCreate(props) {
   const navigate = useNavigate();
   const [nameInput, setNameInput] = useState("");
-  const [descriptionInput, setDescriptionInput] = useState("");
-  const [letterInput, setLetterInput] = useState();
-  const [musicInput, setMusicInput] = useState("");
-  const [songInput, setSongInput] = useState("");
+  const [imageInput, setImageInput] = useState("");
 
   const handleNameChange = (event) => setNameInput(event.target.value);
-  const handleDescriptionChange = (event) =>
-    setDescriptionInput(event.target.value);
-  const handleLetterChange = (event) => setLetterInput(event.target.value);
-  const handleMusicChange = (event) => setMusicInput(event.target.value);
-  const handleSongChange = (event) => setSongInput(event.target.value);
+  const handleImageChange = (event) =>
+    setImageInput(event.target.value);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const newCreation = {
       name: nameInput,
-      description: descriptionInput,
-      letter: letterInput,
-      music: musicInput,
-      song: songInput,
+      image: imageInput,
     };
     try {
       await createCreationService(newCreation);
@@ -54,43 +45,16 @@ function CreationCreate(props) {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>Description:</Form.Label>
+          <Form.Label>Imagen:</Form.Label>
           <Form.Control
             type="text"
-            name="description"
-            value={descriptionInput}
-            onChange={handleDescriptionChange}
+            name="image"
+            value={imageInput}
+            onChange={handleImageChange}
           />
         </Form.Group>
 
-        <Form.Group>
-          <Form.Label>Letra de la canción:</Form.Label>
-          <Form.Control
-            ype="text"
-            name="letter"
-            value={letterInput}
-            onChange={handleLetterChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Música:</Form.Label>
-          <Form.Control
-            type="text"
-            name="music"
-            value={musicInput}
-            onChange={handleMusicChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Canción completa:</Form.Label>
-          <Form.Control
-            type="text"
-            name="song"
-            value={songInput}
-            onChange={handleSongChange}
-          />
-        </Form.Group>
-        <Button type="submit">Crear</Button>
+               <Button type="submit">Crear</Button>
       </Form>
     </div>
   );
