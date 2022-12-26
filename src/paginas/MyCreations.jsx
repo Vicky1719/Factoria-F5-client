@@ -2,9 +2,9 @@ import React from "react";
 import { userCreationService } from "../services/profile.services";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
 import Spinner from "react-bootstrap/Spinner";
+import Card from 'react-bootstrap/Card'
+
 
 function MyCreations() {
   const navigate = useNavigate();
@@ -40,10 +40,11 @@ function MyCreations() {
       {creation.map((eachCreation) => {
         return (
           <p key={eachCreation._id}>
-            <>
-              <h3>{eachCreation.name} </h3>
-            </>
+            <Link to={`/creation/${eachCreation._id}`}>
+           < Card body style={{width: "250px", textDecoration: "none"}} >{eachCreation.name}</Card>
+            </Link>
           </p>
+         
         );
       })}
     </div>

@@ -18,13 +18,12 @@ function Navbarr() {
     <>
 <Navbar bg="light" variant="light">
         <Container>
-      <Navbar.Brand>Creaciones</Navbar.Brand>
    
       {isLoggedIn === true ? (
     <Nav className="me-auto">
     <Nav.Link href="/">Inicio</Nav.Link>
     <Nav.Link href="/profile">Perfil</Nav.Link>
-    <Nav.Link href="/creation">Creaciones</Nav.Link>
+    <Nav.Link href="/creation">Imágenes</Nav.Link>
            
          
           <NavLink to="/">
@@ -35,7 +34,7 @@ function Navbarr() {
       ) : (
         <Nav className="me-auto">
             <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/creation">Creaciones</Nav.Link>
+            <Nav.Link href="/creation">Imágenes</Nav.Link>
             <Nav.Link href="/signup">Regístrate</Nav.Link>
             <Nav.Link href="/login">Accede</Nav.Link>
           </Nav>

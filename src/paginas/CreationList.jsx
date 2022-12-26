@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { creationListService } from "../services/creation.services";
-import { Button } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
 import Spinner from "react-bootstrap/Spinner";
 import Card from 'react-bootstrap/Card'
 
@@ -39,9 +37,11 @@ function CreationList() {
         return  (
           <p key={eachCreation._id}>
             <Link to={`/creation/${eachCreation._id}`}>
-           < Card body style={{backgroundColor:"lightblue", width: "250px", textDecoration: "none"}} >{eachCreation.name}</Card>
+           < Card body style={{width: "250px", textDecoration: "none"}} >{eachCreation.name}{eachCreation.image}</Card>
             </Link>
           </p>
+          
+        
         );
       })}
     </div>

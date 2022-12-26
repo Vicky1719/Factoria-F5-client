@@ -41,14 +41,14 @@ function Profile() {
   
   return (
     <div className='fondo'>
-      < Card body style={{backgroundColor:"lightblue"}}><h3>Hola! {details.username} </h3>
+      < Card body><h3>Hola! {details.username} </h3>
       <p>Nombre: {details.firstname}</p>
       <p>Apellidos: {details.lastname}</p></Card>
      
 
       <Link to={"/profile/edit"}><Button>Editar</Button></Link>
       <Link to={"/profile/new-creation"}><Button>Crea una nueva creación</Button></Link>
-      <Link to={"/profile/my-creation"}><Button>Mis creaciones</Button></Link>
+      <Link to={"/profile/my-creation"}><Button>Mis imágenes</Button></Link>
     </div>
   )
 }

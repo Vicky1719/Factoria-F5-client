@@ -7,14 +7,27 @@ import { createCreationService } from "../services/creation.services";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function CreationCreate(props) {
+function CreationCreate() {
   const navigate = useNavigate();
   const [nameInput, setNameInput] = useState("");
   const [imageInput, setImageInput] = useState("");
 
+  useEffect(() => {
+getData()
+  },[])
+
+
+  const getData = async() => {
+    try {
+const response = await createCreationService()
+console.log("lupa", response.data)
+    }catch(error) {
+      navigate("/error");
+    }
+  }
+
   const handleNameChange = (event) => setNameInput(event.target.value);
-  const handleImageChange = (event) =>
-    setImageInput(event.target.value);
+  const handleImageChange = (event) => setImageInput(event.target.value);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -26,7 +39,7 @@ function CreationCreate(props) {
       await createCreationService(newCreation);
       navigate("/profile/my-creation");
     } catch (error) {
-      navigate(error);
+      navigate("/error");
     }
   };
 
@@ -45,16 +58,14 @@ function CreationCreate(props) {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label>Imagen:</Form.Label>
-          <Form.Control
-            type="text"
-            name="image"
-            value={imageInput}
-            onChange={handleImageChange}
-          />
+          <Form.Label htmlForm="image">Imagen:</Form.Label>
+          <input
+            type="file" name="image"
+            onChange={handleImageChange}>
+          </input>
         </Form.Group>
 
-               <Button type="submit">Crear</Button>
+        <Button type="submit">Crear</Button>
       </Form>
     </div>
   );

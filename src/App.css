@@ -1,5 +1,16 @@
+body {
+  margin: 0;
+  background-image: url("../public/factoria.webp");
+  background-size: cover;
+}
+
 .App {
   text-align: center;
+  color:gray;
+  font-size: 30px;
+  box-shadow: #373ca1;
+
+
 }
 
 .App-logo {
@@ -21,11 +32,13 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:#a1375a;
 }
 
 .App-link {
-  color: #61dafb;
+  color:gray;
+  text-decoration: none;
+  
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +48,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+.inicio {
+  padding: 20 36;
+  display: flex;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: gray;
+  text-decoration: none;
+}
+
+.inicio-menu {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.titulo {
+  font-size: 200px;
+  color:gray;
+  
+ 
+}
+
+.form {
+  width: 95%;
+  background-color: transparent;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fondo {
+ color:gray;
+ box-shadow: #ffffff;
+
 }
