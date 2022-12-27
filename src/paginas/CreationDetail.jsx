@@ -7,7 +7,7 @@ import {
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import Spinner from "react-bootstrap/Spinner";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 function CreationDetail() {
   const { user } = useContext(AuthContext);
@@ -50,25 +50,29 @@ function CreationDetail() {
 
   return (
     <div className="editar">
-      
       <h2>Detalles</h2>
       <p>Nombre: {creationDetail.name}</p>
       <p>Imagen:</p>
-      <br/>
-         {<img src={creationDetail.image} alt="photo-detail" width={200} />}      
+      <br />
+      {<img src={creationDetail.image} alt="photo-detail" width={200} />}
       {user.user._id === creationDetail.user && (
         <Link to={`/creation/${creationId}/edit`}>
-<br/>
-<Button type="submit" className="btn btn-light" variant="light">Editar</Button>{' '}
-          </Link>
-        )}
-{user.user._id === creationDetail.user && (
-            <Button type="submit" className="btn btn-light" variant="light" onClick={handleDelete}>Borrar</Button>
-
-
-        )}
-
-
+          <br />
+          <Button type="submit" className="btn btn-light" variant="light">
+            Editar
+          </Button>{" "}
+        </Link>
+      )}
+      {user.user._id === creationDetail.user && (
+        <Button
+          type="submit"
+          className="btn btn-light"
+          variant="light"
+          onClick={handleDelete}
+        >
+          Borrar
+        </Button>
+      )}
     </div>
   );
 }

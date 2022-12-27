@@ -3,8 +3,7 @@ import { userCreationService } from "../services/profile.services";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
-import Card from 'react-bootstrap/Card'
-
+import Card from "react-bootstrap/Card";
 
 function MyCreations() {
   const navigate = useNavigate();
@@ -36,19 +35,29 @@ function MyCreations() {
   }
 
   return (
-    <div  className="fondo cartas">
+    <div className="fondo cartas">
       {creation.map((eachCreation) => {
         return (
           <p className="fotos" key={eachCreation._id}>
             <Link to={`/creation/${eachCreation._id}`}>
-            
-            < Card body style={{width: "250px", height:"250px", textDecoration: "none"}} >{eachCreation.name}
-            <br/ >
-            <img src={eachCreation.image} alt="photo-creation" width={150} />
-</Card>
+              <Card
+                body
+                style={{
+                  width: "250px",
+                  height: "250px",
+                  textDecoration: "none",
+                }}
+              >
+                {eachCreation.name}
+                <br />
+                <img
+                  src={eachCreation.image}
+                  alt="photo-creation"
+                  width={150}
+                />
+              </Card>
             </Link>
           </p>
-         
         );
       })}
     </div>

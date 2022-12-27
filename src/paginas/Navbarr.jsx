@@ -4,7 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
-import Button from 'react-bootstrap/Button';
 
 function Navbarr() {
   const { authenticatorUser, isLoggedIn, setUser, setIsLoggedIn } =
@@ -31,7 +30,9 @@ function Navbarr() {
                 <Nav.Link href="/creation">Imágenes</Nav.Link>
               </Nav.Item>
               <Nav.Item to="/">
-                <Nav.Link href="/" variant="light" onClick={handleLogout}>Cerrar Sesión</Nav.Link>
+                <Nav.Link href="/" variant="light" onClick={handleLogout}>
+                  Cerrar Sesión
+                </Nav.Link>
               </Nav.Item>
             </Nav>
           ) : (
@@ -51,7 +52,6 @@ function Navbarr() {
       </Nav>
     </>
   );
-
 }
 
 export default Navbarr;

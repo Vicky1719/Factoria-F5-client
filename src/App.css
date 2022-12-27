@@ -6,11 +6,9 @@ body {
 
 .App {
   text-align: center;
-  color:gray;
+  color: gray;
   font-size: 30px;
   box-shadow: hsl(240, 8%, 76%);
-
-
 }
 
 .App-logo {
@@ -32,13 +30,12 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color:#a1375a;
+  color: #a1375a;
 }
 
 .App-link {
-  color:gray;
+  color: gray;
   text-decoration: none;
-  
 }
 
 @keyframes App-logo-spin {
@@ -69,11 +66,9 @@ body {
 
 .titulo {
   font-size: 50px;
-  color:gray;
+  color: gray;
   margin-top: 2%;
   margin-bottom: 2%;
-
- 
 }
 
 .form {
@@ -87,44 +82,38 @@ body {
 }
 
 .fondo {
- color:gray;
- box-shadow: #ffffff;
- 
+  color: gray;
+  box-shadow: #ffffff;
 }
 
 .perfil {
   margin-top: 5%;
-  
-
 }
 
 .perfil a {
-  color:#282c34;
-  text-decoration:none;
+  color: #282c34;
+  text-decoration: none;
   padding: 20px;
-  
 }
 
 .cartas {
   flex-direction: row;
   display: flex;
- padding-top: 50px;
-justify-content: center;
-align-content: center;
-gap: 20px;
-flex-wrap: wrap;
+  padding-top: 50px;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .nav-link {
-  color:#282c34;
+  color: #282c34;
 }
-
 
 .fondo a {
-  color:#282c34;
-  text-decoration:none
+  color: #282c34;
+  text-decoration: none;
 }
-
 
 .portada {
   background-image: url("../public/factoria-web.png");
@@ -137,10 +126,9 @@ flex-wrap: wrap;
 }
 
 .editar a {
-  color:#282c34;
-  text-decoration:none
+  color: #282c34;
+  text-decoration: none;
 }
-
 
 .botones {
   margin-top: 5%;
@@ -149,4 +137,3 @@ flex-wrap: wrap;
 .fotos img {
   margin-top: 6%;
 }
-

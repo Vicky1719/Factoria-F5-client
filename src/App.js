@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Navbarr from "./paginas/Navbarr";
 import { Routes, Route } from "react-router-dom";
@@ -14,7 +14,6 @@ import CreationList from "./paginas/CreationList";
 import CreationDetail from "./paginas/CreationDetail";
 import CreationEdit from "./paginas/CreationEdit";
 import MyCreations from "./paginas/MyCreations";
-
 
 function App() {
   return (
