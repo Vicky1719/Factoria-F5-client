@@ -4,7 +4,6 @@ import { deleteProfileService, getProfileDetailsService, updateProfileService } 
 import {AuthContext} from "../context/auth.context"
 import { Button } from 'react-bootstrap';
 import Form from "react-bootstrap/Form";
-import Spinner from 'react-bootstrap/Spinner'
 
 
 function Profile() {
@@ -107,9 +106,9 @@ padding: 30 }}>
 
 
 
-<Button onClick={handleUpdate}>Actualizar</Button>
+<Button type="submit" variant="outline-primary" onClick={handleUpdate}>Actualizar</Button>{' '}
 
-      
+       
           
       
       </Form>

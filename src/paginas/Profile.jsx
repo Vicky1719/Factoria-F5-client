@@ -7,6 +7,7 @@ import Spinner from 'react-bootstrap/Spinner'
 import Card from 'react-bootstrap/Card'
 
 
+
 function Profile() {
 
   const navigate = useNavigate()
@@ -45,9 +46,12 @@ function Profile() {
       </Card>
      
 
-      <Link to={"/profile/edit"}><Button>Editar</Button></Link>
-      <Link to={"/profile/new-creation"}><Button>Crea una nueva creación</Button></Link>
-      <Link to={"/profile/my-creation"}><Button>Mis imágenes</Button></Link>
+      <Link to={"/profile/edit"}><Button type="submit" variant="outline-primary">Editar</Button>{' '}
+</Link>
+      <Link to={"/profile/new-creation"}><Button type="submit" variant="outline-primary">Crear una nueva imagen</Button>{' '}
+</Link>
+      <Link to={"/profile/my-creation"}><Button type="submit" variant="outline-primary">Mis imágenes</Button>{' '}
+</Link>
     </div>
   )
 }

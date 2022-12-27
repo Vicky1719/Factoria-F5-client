@@ -71,9 +71,10 @@ function CreationCreate() {
         </Form.Group>
         <br />
         {isUploadingImage === true && <p>... loading content</p>}
-        {imageInput !== "" ? <img src={imageInput} alt="image" width={200} /> : <p> Choose image </p>}
+        {imageInput !== "" ? <img src={imageInput} alt="image" width={200} /> : <p> Cargar imagen </p>}
 <br />
-        <Button type="submit">Crear</Button>
+        <Button type="submit" variant="outline-primary">Crear</Button>{' '}
+
       </Form>
     </div>
   );

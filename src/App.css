@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url("../public/factoria.webp");
+  background-image: url("../public/fondo.jpg");
   background-size: cover;
 }
 
@@ -8,7 +8,7 @@ body {
   text-align: center;
   color:gray;
   font-size: 30px;
-  box-shadow: #373ca1;
+  box-shadow: hsl(240, 8%, 76%);
 
 
 }
@@ -68,11 +68,13 @@ body {
 }
 
 .titulo {
-  font-size: 200px;
+  font-size: 50px;
   color:gray;
   
- 
+  
 }
+
+
 
 .form {
   width: 95%;
@@ -89,3 +91,4 @@ body {
  box-shadow: #ffffff;
 
 }
+

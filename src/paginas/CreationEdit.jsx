@@ -13,6 +13,7 @@
   import Form from "react-bootstrap/Form";
   import { uploadImageService } from "../services/upload.services";
   
+  
   function CreationEdit() {
     const { creationId } = useParams();
     const navigate = useNavigate();
@@ -100,8 +101,8 @@
         {imageInput !== "" ? <img src={imageInput} alt="image" width={200} /> : <p> Elegir Imagen </p>}
           </Form.Group>
          
-          
-          <Button onClick={handleSubmit}>Editar</Button>
+          <Button type="submit" variant="outline-primary" >Editar</Button>{' '}
+
         </Form>
       </div>
     );

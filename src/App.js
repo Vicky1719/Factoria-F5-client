@@ -13,6 +13,8 @@ import CreationList from "./paginas/CreationList";
 import CreationDetail from "./paginas/CreationDetail";
 import CreationEdit from "./paginas/CreationEdit";
 import MyCreations from "./paginas/MyCreations";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

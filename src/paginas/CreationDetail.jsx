@@ -7,6 +7,7 @@ import {
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import Spinner from "react-bootstrap/Spinner";
+import Button from 'react-bootstrap/Button';
 
 function CreationDetail() {
   const { user } = useContext(AuthContext);
@@ -58,11 +59,13 @@ function CreationDetail() {
       {user.user._id === creationDetail.user && (
         <Link to={`/creation/${creationId}/edit`}>
 <br/>
+<Button type="submit" variant="outline-primary">Editar</Button>{' '}
 
-          <button>Editar</button></Link>
+          </Link>
         )}
 {user.user._id === creationDetail.user && (
-          <button onClick={handleDelete}>Borrar</button>
+            <Button type="submit" variant="outline-primary" onClick={handleDelete}>Borrar</Button>
+
 
         )}
 

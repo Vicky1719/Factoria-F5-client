@@ -74,7 +74,7 @@ padding: 30 }}>
 <Form.Label>Contraseña:</Form.Label>
 <Form.Control type="password" name="password" value={password} onChange={handlePasswordChange} />
 </Form.Group>
-<Button onClick={handleSignup}>Regístrate</Button>
+<Button type="submit" variant="outline-primary" onClick={handleSignup}>Regístrate</Button>
       
         {errorMessage !== "" && <p>{errorMessage}</p>}
 

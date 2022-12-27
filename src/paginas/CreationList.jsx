@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { creationListService } from "../services/creation.services";
 import Spinner from "react-bootstrap/Spinner";
 import Card from 'react-bootstrap/Card'
+import { Container } from "react-bootstrap";
 
 function CreationList() {
   const navigate = useNavigate();
@@ -35,12 +36,14 @@ function CreationList() {
     <div className="fondo">
       {list.map((eachCreation) => {
         return  (
+        
           <p key={eachCreation._id}>
             <Link to={`/creation/${eachCreation._id}`}>
-            < Card body style={{width: "250px", textDecoration: "none"}} >{eachCreation.name}</Card>
-           <img src={eachCreation.image} alt="photo-creation" width={150} />
+            < Card  body style={{width: "250px", textDecoration: "none"}} >{eachCreation.name}
+           <img src={eachCreation.image} alt="photo-creation" width={150} /></Card>
             </Link>
           </p>
+        
           
         
         );
