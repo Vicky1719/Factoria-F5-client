@@ -20,7 +20,7 @@ function Navbarr() {
       <Nav variant="tabs" defaultActiveKey="/home">
         <Container>
           {isLoggedIn === true ? (
-            <Nav className="me-auto">
+            <Nav className="me-auto links">
               <Nav.Item>
                 <Nav.Link href="/">Inicio</Nav.Link>
               </Nav.Item>
@@ -31,16 +31,13 @@ function Navbarr() {
                 <Nav.Link href="/creation">Imágenes</Nav.Link>
               </Nav.Item>
               <Nav.Item to="/">
-                <Button variant="outline-primary" onClick={handleLogout}>Cerrar Sesión</Button>{' '}
+                <Nav.Link href="/" variant="light" onClick={handleLogout}>Cerrar Sesión</Nav.Link>
               </Nav.Item>
             </Nav>
           ) : (
-            <Nav className="me-auto">
+            <Nav className="me-auto links">
               <Nav.Item>
                 <Nav.Link href="/">Inicio</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="/creation">Imágenes</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link href="/signup">Regístrate</Nav.Link>

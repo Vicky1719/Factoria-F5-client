@@ -49,7 +49,7 @@ function CreationDetail() {
   }
 
   return (
-    <div>
+    <div className="editar">
       
       <h2>Detalles</h2>
       <p>Nombre: {creationDetail.name}</p>
@@ -59,12 +59,11 @@ function CreationDetail() {
       {user.user._id === creationDetail.user && (
         <Link to={`/creation/${creationId}/edit`}>
 <br/>
-<Button type="submit" variant="outline-primary">Editar</Button>{' '}
-
+<Button type="submit" className="btn btn-light" variant="light">Editar</Button>{' '}
           </Link>
         )}
 {user.user._id === creationDetail.user && (
-            <Button type="submit" variant="outline-primary" onClick={handleDelete}>Borrar</Button>
+            <Button type="submit" className="btn btn-light" variant="light" onClick={handleDelete}>Borrar</Button>
 
 
         )}

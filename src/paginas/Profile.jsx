@@ -41,17 +41,18 @@ function Profile() {
 
   
   return (
-    <div className='fondo'>
-      < Card body><h3>Hola! {details.username} </h3>
-      </Card>
+    <div className='perfil'>
+      <h2>Hola! {details.username} </h2>
+      
      
-
-      <Link to={"/profile/edit"}><Button type="submit" variant="outline-primary">Editar</Button>{' '}
+<div className="botones">
+      <Link to={"/profile/edit"}><Button type="submit" className="btn btn-light" variant="light">Editar</Button>{' '}
 </Link>
-      <Link to={"/profile/new-creation"}><Button type="submit" variant="outline-primary">Crear una nueva imagen</Button>{' '}
+      <Link to={"/profile/new-creation"}><Button type="submit" className="btn btn-light" variant="light">Crear una nueva imagen</Button>{' '}
 </Link>
-      <Link to={"/profile/my-creation"}><Button type="submit" variant="outline-primary">Mis imágenes</Button>{' '}
-</Link>
+      <Link to={"/profile/my-creation"}><Button type="submit" className="btn btn-light" variant="light">Mis imágenes</Button>{' '}
+</Link> 
+</div>
     </div>
   )
 }

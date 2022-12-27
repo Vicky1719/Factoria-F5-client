@@ -1,8 +1,7 @@
 import React from "react";
 
-import { useEffect } from "react";
 import { useState } from "react";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { createCreationService } from "../services/creation.services";
 import { uploadImageService } from "../services/upload.services";
 import Button from "react-bootstrap/Button";
@@ -54,16 +53,14 @@ function CreationCreate() {
       <Form className="form" onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label>Nombre:</Form.Label>
-          <input
-            type="text"
-            name="name"
-            value={nameInput}
-            onChange={handleNameChange}
-          />
+          
+          <Form.Control type="text" name="name" onChange={handleNameChange} />
+
         </Form.Group>
 
         <Form.Group>
           <Form.Label htmlForm="image">Imagen:</Form.Label>
+          
           <input
             type="file" name="image"
             onChange={handleImageChange}>
@@ -71,9 +68,10 @@ function CreationCreate() {
         </Form.Group>
         <br />
         {isUploadingImage === true && <p>... loading content</p>}
-        {imageInput !== "" ? <img src={imageInput} alt="image" width={200} /> : <p> Cargar imagen </p>}
+        {imageInput !== "" ? <img src={imageInput} alt="image" width={200} height={160} /> : <p> Cargar imagen </p>}
 <br />
-        <Button type="submit" variant="outline-primary">Crear</Button>{' '}
+        <Button type="submit" className="btn btn-light" variant="light">Subir imagen</Button>{' '}
+       
 
       </Form>
     </div>

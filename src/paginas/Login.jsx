@@ -71,8 +71,8 @@ function Login() {
             onChange={handlePasswordChange}
           />
         </Form.Group>
-
-        <Button type="submit">Login</Button>
+        
+        <Button type="submit" className="btn btn-light" variant="light" >Login</Button>
 
         {errorMessage !== "" && <p style={{ color: "red" }}>{errorMessage}</p>}
       </Form>

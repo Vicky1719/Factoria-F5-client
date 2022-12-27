@@ -70,11 +70,11 @@ body {
 .titulo {
   font-size: 50px;
   color:gray;
-  
-  
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+ 
 }
-
-
 
 .form {
   width: 95%;
@@ -89,6 +89,64 @@ body {
 .fondo {
  color:gray;
  box-shadow: #ffffff;
+ 
+}
 
+.perfil {
+  margin-top: 5%;
+  
+
+}
+
+.perfil a {
+  color:#282c34;
+  text-decoration:none;
+  padding: 20px;
+  
+}
+
+.cartas {
+  flex-direction: row;
+  display: flex;
+ padding-top: 50px;
+justify-content: center;
+align-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.nav-link {
+  color:#282c34;
+}
+
+
+.fondo a {
+  color:#282c34;
+  text-decoration:none
+}
+
+
+.portada {
+  background-image: url("../public/factoria-web.png");
+  background-color: transparent;
+  height: 800px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.editar a {
+  color:#282c34;
+  text-decoration:none
+}
+
+
+.botones {
+  margin-top: 5%;
+}
+
+.fotos img {
+  margin-top: 6%;
 }
 

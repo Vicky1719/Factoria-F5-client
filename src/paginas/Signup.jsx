@@ -51,7 +51,7 @@ function Signup() {
       <div style={{ 
 width: 700, 
 padding: 30 }}>
-<h4 >Regístrate</h4>
+<h1>Regístrate</h1>
 <Form className="form"  onSubmit={handleSignup}>
 <Form.Group>
 <Form.Label>Usuario:</Form.Label>
@@ -74,8 +74,7 @@ padding: 30 }}>
 <Form.Label>Contraseña:</Form.Label>
 <Form.Control type="password" name="password" value={password} onChange={handlePasswordChange} />
 </Form.Group>
-<Button type="submit" variant="outline-primary" onClick={handleSignup}>Regístrate</Button>
-      
+<Button type="submit" className="btn btn-light" variant="light" onClick={handleSignup}>Regístrate</Button>{' '}
         {errorMessage !== "" && <p>{errorMessage}</p>}
 
       </Form>

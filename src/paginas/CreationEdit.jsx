@@ -101,7 +101,7 @@
         {imageInput !== "" ? <img src={imageInput} alt="image" width={200} /> : <p> Elegir Imagen </p>}
           </Form.Group>
          
-          <Button type="submit" variant="outline-primary" >Editar</Button>{' '}
+          <Button type="submit" className="btn btn-light" variant="light" >Editar</Button>{' '}
 
         </Form>
       </div>

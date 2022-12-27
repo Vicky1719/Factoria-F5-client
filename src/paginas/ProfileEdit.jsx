@@ -106,7 +106,7 @@ padding: 30 }}>
 
 
 
-<Button type="submit" variant="outline-primary" onClick={handleUpdate}>Actualizar</Button>{' '}
+<Button type="submit" className="btn btn-light" variant="light" onClick={handleUpdate}>Actualizar</Button>{' '}
 
        
           

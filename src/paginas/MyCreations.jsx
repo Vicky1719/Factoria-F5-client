@@ -36,12 +36,15 @@ function MyCreations() {
   }
 
   return (
-    <div>
+    <div  className="fondo cartas">
       {creation.map((eachCreation) => {
         return (
-          <p key={eachCreation._id}>
+          <p className="fotos" key={eachCreation._id}>
             <Link to={`/creation/${eachCreation._id}`}>
-            < Card body style={{width: "250px", textDecoration: "none"}} >{eachCreation.name}<img src={eachCreation.image} alt="photo-creation" width={150} />
+            
+            < Card body style={{width: "250px", height:"250px", textDecoration: "none"}} >{eachCreation.name}
+            <br/ >
+            <img src={eachCreation.image} alt="photo-creation" width={150} />
 </Card>
             </Link>
           </p>
